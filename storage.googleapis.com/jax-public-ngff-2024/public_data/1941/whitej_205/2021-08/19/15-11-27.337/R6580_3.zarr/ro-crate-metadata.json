@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#f186de83-86af-4356-b200-470039ffe9ac"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#55c45b3b-efdb-4043-83df-4c0a70a203c1",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid10090"
+      }
+    },
+    {
+      "@id": "#ff86b762-3a66-4e8f-86ee-fb0eb4b37d61",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#55c45b3b-efdb-4043-83df-4c0a70a203c1"
+      }
+    },
+    {
+      "@id": "#f186de83-86af-4356-b200-470039ffe9ac",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000243"
+      },
+      "specimen": {
+        "@id": "#ff86b762-3a66-4e8f-86ee-fb0eb4b37d61"
+      }
+    }
+  ]
+}

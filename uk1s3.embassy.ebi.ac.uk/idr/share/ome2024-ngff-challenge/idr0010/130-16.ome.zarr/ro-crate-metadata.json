@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Doil DNA damage screen: idr0010/130-16.ome.zarr",
+      "description": "A high-content microscopy screen for genes whose downregulation by RNA interference (RNAi) prevents accumulation of 53BP1 at the sites of DSBs.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#f6220e60-7663-48e4-bd93-15c29b3d0143"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#1310593d-6e38-4030-b1a6-b131799db6af",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#553e398e-d6dd-4021-8218-150b9ecb1f76",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#1310593d-6e38-4030-b1a6-b131799db6af"
+      }
+    },
+    {
+      "@id": "#f6220e60-7663-48e4-bd93-15c29b3d0143",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#553e398e-d6dd-4021-8218-150b9ecb1f76"
+      }
+    }
+  ]
+}

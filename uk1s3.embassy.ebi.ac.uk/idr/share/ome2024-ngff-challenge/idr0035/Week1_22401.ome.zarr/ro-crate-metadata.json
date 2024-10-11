@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Caie: High-content phenotypic profiling of drug response signatures across distinct cancer cells.: idr0035/Week1_22401.ome.zarr",
+      "description": "The images are of MCF-7 breast cancer cells treated for 24 h with a collection of 113 small molecules at eight concentrations. The cells were fixed, labeled for DNA, F-actin, and B-tubulin, and imaged by fluorescent microscopy.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#65afc31e-eea9-4cfb-b1b9-fc5b0958ff8d"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#5a35c100-e852-4072-a291-127c86bfdcfd",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#b185f07f-e08c-4f43-8e8c-dd8a47b3b5a7",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#5a35c100-e852-4072-a291-127c86bfdcfd"
+      }
+    },
+    {
+      "@id": "#65afc31e-eea9-4cfb-b1b9-fc5b0958ff8d",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#b185f07f-e08c-4f43-8e8c-dd8a47b3b5a7"
+      }
+    }
+  ]
+}

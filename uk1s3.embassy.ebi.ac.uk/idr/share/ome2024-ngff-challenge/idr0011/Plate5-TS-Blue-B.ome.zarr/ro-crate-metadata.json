@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Ledesma-Fern\u00e1ndez; Protein Kinase C and the stress response pathways are required for kinetochore homeostasis: idr0011/Plate5-TS-Blue-B.ome.zarr",
+      "description": "In this screen, Synthetic Genetic Array (SGA) methodology (Tong et al, 2001) was used to combine the DAD4-YFP and SPC42-RFP alleles with the non-essential deletion collection (Winzeler et al, 1999), which includes 4746 separate viable deletion strains, to systematically assess the effect of specific mutations on the kinetochore.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#c30c66a1-231b-483a-bcae-533dba7d7826"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#64b212d4-54fa-4399-8b2c-4813e5145026",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid4932"
+      }
+    },
+    {
+      "@id": "#050814f6-7b47-4a77-af7d-8f1e64ce4b76",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#64b212d4-54fa-4399-8b2c-4813e5145026"
+      }
+    },
+    {
+      "@id": "#c30c66a1-231b-483a-bcae-533dba7d7826",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#050814f6-7b47-4a77-af7d-8f1e64ce4b76"
+      }
+    }
+  ]
+}

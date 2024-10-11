@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0090 Ashdown Malaria: 190502.zarr",
+      "description": "A machine learning approach to define antimalarial drug action from heterogeneous cell-based screens",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#be113847-4f8a-42a3-983b-4f60108e826a"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#d6e7d447-0e96-4be5-9fc7-518d8af03321",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid36329"
+      }
+    },
+    {
+      "@id": "#270622d1-a61a-4a65-aa0b-639619c9499f",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#d6e7d447-0e96-4be5-9fc7-518d8af03321"
+      }
+    },
+    {
+      "@id": "#be113847-4f8a-42a3-983b-4f60108e826a",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#270622d1-a61a-4a65-aa0b-639619c9499f"
+      }
+    }
+  ]
+}

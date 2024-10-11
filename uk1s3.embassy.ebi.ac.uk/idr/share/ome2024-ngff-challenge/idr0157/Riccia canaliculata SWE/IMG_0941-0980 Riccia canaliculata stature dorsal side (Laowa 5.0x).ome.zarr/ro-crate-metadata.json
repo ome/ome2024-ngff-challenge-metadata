@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0157 Peters Bryophytes: IMG_0941-0980 Riccia canaliculata stature dorsal side (Laowa 5.0x).ome.zarr",
+      "description": "Estimating essential phenotypic and molecular traits from integrative biodiversity data",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#e5b6669e-4e15-4b05-a3b1-0265086db867",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid2779758"
+      }
+    },
+    {
+      "@id": "#d3cc49a0-96cf-40f6-8de3-a1a0bb25b21f",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#e5b6669e-4e15-4b05-a3b1-0265086db867"
+      }
+    }
+  ]
+}

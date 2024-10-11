@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Selected 1 micron scans of BigBrain histological sections",
+      "description": "This dataset contains selected microscopic scans of tissue sections at 1 micron in-plane resolution from the BigBrain, a whole brain 3D reconstruction of a human postmortem brain. Each image is provided both in its original histological space, as well as aligned to the corresponding coronal section of the 3D-reconstructed BigBrain space. The images were acquired by rescanning the original histological sections of the BigBrain model at an in-plane resolution of 1\u00b5m. The sections were aligned to their corresponding coronal planes in the 20\u00b5m 3D-reconstructed BigBrain space using 2D non-linear transformations, and allow to identify microscopic features at the cellular level due to their increased resolution.",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "resultOf": {
+        "@id": "#7edf095f-cb45-4938-a460-fe7f3991a4a7"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#5b8293ca-2542-4443-99e2-ec7a6f071868",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#0fb6d503-a1ef-4c74-a6f7-9368f2c04e8c",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#5b8293ca-2542-4443-99e2-ec7a6f071868"
+      }
+    },
+    {
+      "@id": "#7edf095f-cb45-4938-a460-fe7f3991a4a7",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000243"
+      },
+      "specimen": {
+        "@id": "#0fb6d503-a1ef-4c74-a6f7-9368f2c04e8c"
+      }
+    }
+  ]
+}

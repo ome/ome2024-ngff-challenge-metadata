@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Cellular level 3D reconstructed volume at 1\u00b5m resolution within the BigBrain occipital cortex (area V1)",
+      "description": "This dataset contains a 6x6x6 mm3 volume sampled from the occipital cortex (area V1) of a human postmortem brain. The volume was acquired by rescanning the original histological sections of the BigBrain model at an isotropic resolution of 1\\u00b5m. The sections were linearly 3D reconstructed by aligning matched pairs of bisected cells, which were identified from congruent point constellations.",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "resultOf": {
+        "@id": "#50bc0bef-59af-4c9a-88db-f0580452c902"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#56dfeac0-c874-4299-b048-ed812653de21",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#afea6c6f-6404-4f89-8368-429c90f105f9",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#56dfeac0-c874-4299-b048-ed812653de21"
+      }
+    },
+    {
+      "@id": "#50bc0bef-59af-4c9a-88db-f0580452c902",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000243"
+      },
+      "specimen": {
+        "@id": "#afea6c6f-6404-4f89-8368-429c90f105f9"
+      }
+    }
+  ]
+}

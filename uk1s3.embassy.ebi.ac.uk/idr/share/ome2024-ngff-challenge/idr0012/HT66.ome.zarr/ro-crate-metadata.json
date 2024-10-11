@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Fuchs: Clustering phenotype populations by genome-wide RNAi and multiparametric imaging: idr0012/HT66.ome.zarr",
+      "description": "To cluster genes and predict function on a genome-wide scale, we measured the effects of 22 839 siRNA-mediated knockdowns on HeLa cells.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#6959d42a-cf59-4086-90b9-6b7f95274a31"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#75a52082-bf8f-4d43-af3e-171349d17f9d",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#65e60a4f-448a-4cd6-8425-8bc8ba7d493f",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#75a52082-bf8f-4d43-af3e-171349d17f9d"
+      }
+    },
+    {
+      "@id": "#6959d42a-cf59-4086-90b9-6b7f95274a31",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#65e60a4f-448a-4cd6-8425-8bc8ba7d493f"
+      }
+    }
+  ]
+}

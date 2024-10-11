@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0157 Peters Bryophytes: IMG_2979-3078 Riccia huebeneriana thallus epidermis with air pore cross section (40x DIC).ome.zarr",
+      "description": "Estimating essential phenotypic and molecular traits from integrative biodiversity data",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#1e03840d-6cde-490b-bcf3-7d7220c673a5",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid122639"
+      }
+    },
+    {
+      "@id": "#ff15046a-afad-42b5-ae5c-dc54e665c7cb",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#1e03840d-6cde-490b-bcf3-7d7220c673a5"
+      }
+    }
+  ]
+}

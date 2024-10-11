@@ -1,0 +1,27 @@
+{"attributes": {
+    "ome": {
+        "version": "0.5",
+        "series" : [
+            "setup0/timepoint0",
+            "setup0/timepoint1",
+            "setup0/timepoint2",
+            "setup0/timepoint3",
+            "setup0/timepoint4",
+            "setup0/timepoint5",
+            "setup0/timepoint6",
+            "setup0/timepoint7",
+            "setup0/timepoint8",
+            "setup0/timepoint9",
+            "setup1/timepoint0",
+            "setup1/timepoint1",
+            "setup1/timepoint2",
+            "setup1/timepoint3",
+            "setup1/timepoint4",
+            "setup1/timepoint5",
+            "setup1/timepoint6",
+            "setup1/timepoint7",
+            "setup1/timepoint8",
+            "setup1/timepoint9"
+        ]
+    }
+}, "zarr_format": 3, "node_type": "group"}

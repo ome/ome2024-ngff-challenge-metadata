@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0157 Peters Bryophytes: IMG_0601-0650 Riccia subbifurca stature ventral side (Laowa 5.0x).ome.zarr",
+      "description": "Estimating essential phenotypic and molecular traits from integrative biodiversity data",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#0141e7b3-f24c-497d-a50d-cc762137cbbb",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid1914413"
+      }
+    },
+    {
+      "@id": "#b9f9e5bb-4fa3-4e27-9add-2ca68c9cbc7a",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#0141e7b3-f24c-497d-a50d-cc762137cbbb"
+      }
+    }
+  ]
+}

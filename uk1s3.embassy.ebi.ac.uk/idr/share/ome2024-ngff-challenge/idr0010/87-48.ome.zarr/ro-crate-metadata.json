@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Doil DNA damage screen: idr0010/87-48.ome.zarr",
+      "description": "A high-content microscopy screen for genes whose downregulation by RNA interference (RNAi) prevents accumulation of 53BP1 at the sites of DSBs.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#5ec645ab-2977-4a2d-bf0e-2b761c7ebf3b"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#58d11f1a-ff39-42ea-8016-e3278415ac4d",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#7cac0e7a-22ff-4e5d-a39a-9ba3094756a7",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#58d11f1a-ff39-42ea-8016-e3278415ac4d"
+      }
+    },
+    {
+      "@id": "#5ec645ab-2977-4a2d-bf0e-2b761c7ebf3b",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#7cac0e7a-22ff-4e5d-a39a-9ba3094756a7"
+      }
+    }
+  ]
+}

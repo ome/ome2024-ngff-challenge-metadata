@@ -1,0 +1,1 @@
+{"attributes": {"ome": {"version": "0.5", "series": ["setup0/timepoint0", "setup0/timepoint1", "setup0/timepoint2", "setup1/timepoint0", "setup1/timepoint1", "setup1/timepoint2", "setup2/timepoint0", "setup2/timepoint1", "setup2/timepoint2", "setup3/timepoint0", "setup3/timepoint1", "setup3/timepoint2"]}}, "zarr_format": 3, "node_type": "group"}

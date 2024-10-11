@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Gustafsdottir: Multiplex cytological profiling assay to measure diverse cellular states.: idr0036/20585.ome.zarr",
+      "description": "The images are of U2OS cells treated with each of 1600 known bioactive compounds and labeled with six labels that characterize seven organelles (the 'Cell Painting' assay)",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#5eae5e8d-465a-4790-8e2d-dfa9895846d0"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#169fff46-8d86-4b12-a316-a287ded2ece1",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid9606"
+      }
+    },
+    {
+      "@id": "#ee6fb086-9f13-4010-b3f3-623eaf1d7f5d",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#169fff46-8d86-4b12-a316-a287ded2ece1"
+      }
+    },
+    {
+      "@id": "#5eae5e8d-465a-4790-8e2d-dfa9895846d0",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#ee6fb086-9f13-4010-b3f3-623eaf1d7f5d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0157 Peters Bryophytes: IMG_2485-2544 Mannia fragrans thallus cross section (10x).ome.zarr",
+      "description": "Estimating essential phenotypic and molecular traits from integrative biodiversity data",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#e47b9347-9f27-44bd-a7a9-4e374ce1522e",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid179045"
+      }
+    },
+    {
+      "@id": "#60f0ab7d-1082-4646-904f-f3d876e85315",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#e47b9347-9f27-44bd-a7a9-4e374ce1522e"
+      }
+    }
+  ]
+}

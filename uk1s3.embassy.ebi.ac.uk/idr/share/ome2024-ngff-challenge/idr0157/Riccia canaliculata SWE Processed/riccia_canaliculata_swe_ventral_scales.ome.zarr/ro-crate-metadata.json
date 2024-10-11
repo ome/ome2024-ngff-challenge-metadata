@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0157 Peters Bryophytes: riccia_canaliculata_swe_ventral_scales.ome.zarr",
+      "description": "Estimating essential phenotypic and molecular traits from integrative biodiversity data",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#0232faee-d8c4-4496-80e0-23c3b82cc387",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid2779758"
+      }
+    },
+    {
+      "@id": "#24813243-752d-4453-aeb5-2bc202b25870",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#0232faee-d8c4-4496-80e0-23c3b82cc387"
+      }
+    }
+  ]
+}

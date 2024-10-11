@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Thorpe Rad52: idr0004/P142.ome.zarr",
+      "description": "This screen assesses the proportion of cells containing spontaneous Rad52-YFP foci in 4,805 viable Saccharomyces cerevisiae deletion strains.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#1366d72b-476f-4d94-9375-ad9cb43a7a1b"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#fcb94681-74e1-43a8-8c8e-63f8d4aa6232",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid4932"
+      }
+    },
+    {
+      "@id": "#6d5bac3a-d7c8-47f3-9789-07b1be82cbee",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#fcb94681-74e1-43a8-8c8e-63f8d4aa6232"
+      }
+    },
+    {
+      "@id": "#1366d72b-476f-4d94-9375-ad9cb43a7a1b",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#6d5bac3a-d7c8-47f3-9789-07b1be82cbee"
+      }
+    }
+  ]
+}

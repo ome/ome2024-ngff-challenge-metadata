@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Weigelin: Focusing and sustaining the antitumor CTL effector killer response by agonist anti-CD137 mAb: idr0026/3.66.9-6.141020_17-15-27.01.ome.zarr",
+      "description": "Combination therapy of adoptive CTL transfer and anti-CD137 monoclonal antibody. Mice were injected with B16F10/OVA melanoma cells and after 3 or 7 days were treated with OVA-specific CD8+ T cells (Cytotoxic T lymphocytes CTL) plus 1D8 antibody (anti-CD137). 4D timelapse images were taken at either 3 or 6 days after CTL + antibody treatment.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#f93cc5dc-8287-447e-9188-ba26cfb7043c"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#9332d2d6-f4f1-4952-b792-f486886981b4",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid10090"
+      }
+    },
+    {
+      "@id": "#bab21c72-6ec0-4260-9986-6dc60dad4196",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#9332d2d6-f4f1-4952-b792-f486886981b4"
+      }
+    },
+    {
+      "@id": "#f93cc5dc-8287-447e-9188-ba26cfb7043c",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000253"
+      },
+      "specimen": {
+        "@id": "#bab21c72-6ec0-4260-9986-6dc60dad4196"
+      }
+    }
+  ]
+}

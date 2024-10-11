@@ -1,0 +1,65 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "idr0090 Ashdown Malaria",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#b1c478ed-69e0-4593-b35d-73fb4592b31f"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#7e9a3824-59f4-4d06-83e6-70568823f3d7",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid36329"
+      }
+    },
+    {
+      "@id": "#eb98fda8-b780-4934-8cd7-86bf945800e5",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#7e9a3824-59f4-4d06-83e6-70568823f3d7"
+      }
+    },
+    {
+      "@id": "#b1c478ed-69e0-4593-b35d-73fb4592b31f",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000246"
+      },
+      "specimen": {
+        "@id": "#eb98fda8-b780-4934-8cd7-86bf945800e5"
+      }
+    }
+  ]
+}

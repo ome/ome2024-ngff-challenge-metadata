@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "organism_classification": "https://schema.org/taxonomicRange",
+      "BioChemEntity": "https://schema.org/BioChemEntity",
+      "channel": "https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome_xsd.html#Channel",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "FBcv": "http://ontobee.org/ontology/FBcv/",
+      "acquisiton_method": {
+        "@reverse": "https://schema.org/result",
+        "@type": "@id"
+      },
+      "biological_entity": "https://schema.org/about",
+      "biosample": "http://purl.obolibrary.org/obo/OBI_0002648",
+      "preparation_method": "https://www.wikidata.org/wiki/Property:P1537",
+      "specimen": "http://purl.obolibrary.org/obo/HSO_0000308"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Arabidopsis phloem pole",
+      "description": "Five-day-old Col-0 Arabidopsis thaliana root, phloem pole unloading zone (339-381 um from the root tip)",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "resultOf": {
+        "@id": "#a704c99d-1cac-4d2a-86c3-13d53841cc58"
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "#f377f8fb-3ee7-430e-8d63-7948027c1d7c",
+      "@type": "biosample",
+      "organism_classification": {
+        "@id": "NCBI:txid3701"
+      }
+    },
+    {
+      "@id": "#16762b2e-ee4c-4880-897b-6102760ba5a9",
+      "@type": "specimen",
+      "biosample": {
+        "@id": "#f377f8fb-3ee7-430e-8d63-7948027c1d7c"
+      }
+    },
+    {
+      "@id": "#a704c99d-1cac-4d2a-86c3-13d53841cc58",
+      "@type": "image_acquisition",
+      "fbbi_id": {
+        "@id": "obo:FBbi_00000585"
+      },
+      "specimen": {
+        "@id": "#16762b2e-ee4c-4880-897b-6102760ba5a9"
+      }
+    }
+  ]
+}
